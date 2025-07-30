@@ -1,8 +1,6 @@
-'use client';
-
 import { useState, useMemo } from 'react';
-import { Search, Filter, ChevronDown, ChevronUp, ExternalLink, Calendar, Clock, X, Eye, Dot } from 'lucide-react';
-import { ExtractedContent } from '@/lib/gemini';
+import { Search, Filter, ChevronDown, ChevronUp, ExternalLink, Calendar, X, Eye, Dot } from 'lucide-react';
+import type { ExtractedContent } from '@/lib/gemini';
 import { cn, formatDate, getRelativeTime, truncateText } from '@/lib/utils';
 
 interface ContentTableProps {
