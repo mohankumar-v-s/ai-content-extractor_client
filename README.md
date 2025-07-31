@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# AI-powered Content Extractor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React application allows users to input any public URL, extract content using AI to generate summaries and key points, and display results in a Notion-like table view with filtering and search capabilities.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **AI-powered extraction**: Enter any public URL to extract and summarize content using AI.
+- **Summary & Key Points**: Automatically generates concise summaries and highlights important information.
+- **Notion-like Table View**: Results are displayed in an interactive table with filtering and search options for easy navigation.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## AI Extract Client
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Installation & Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone the repository**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```sh
+   git clone <repo-url>
+   cd ai_extract_client
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. **Install dependencies**
+
+   ```sh
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```sh
+   npm run dev
+   ```
+
+   The app will be available at [http://localhost:5173](http://localhost:5173) by default.
+
+4. **Build for production**
+
+   ```sh
+   npm run build
+   ```
+
+5. **Preview production build**
+   ```sh
+   npm run preview
+   ```
+
+### Additional Scripts
+
+- `npm run lint` — Run ESLint to check for code issues.
+
+---
